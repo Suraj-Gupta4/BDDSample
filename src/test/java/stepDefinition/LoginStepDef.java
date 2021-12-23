@@ -62,6 +62,7 @@ public class LoginStepDef {
 			public void user_enter_login_credentials(DataTable userCred) {
 			   List<Map<String,String>> data=userCred.asMaps();
 				
+			   System.out.println("Got data from Datatable");
 				driver.findElement(By.name("username")).sendKeys(data.get(0).get("username"));
 			    driver.findElement(By.name("password")).sendKeys(data.get(0).get("password"));
 			    driver.findElement(By.cssSelector(".radius")).click();
